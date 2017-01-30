@@ -74,3 +74,6 @@ set shiftwidth=4
 "禁止生成临时文件
 set nobackup
 set noswapfile 
+"键位映射
+imap kk <esc>
+
