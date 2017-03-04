@@ -30,6 +30,7 @@ Plugin 'scrooloose/nerdtree'  "nerdtree文件列表
 Plugin 'jistr/vim-nerdtree-tabs'  "多文件共享nerdtree
 Plugin 'mattn/emmet-vim'  "前端速写
 Plugin 'jiangmiao/auto-pairs' "括号补全
+Plugin 'Xuyuanp/nerdtree-git-plugin' "nerdtree git  
 filetype plugin indent on
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
