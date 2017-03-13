@@ -29,8 +29,12 @@ Plugin 'https://github.com/tpope/vim-surround.git' "快速更换标签
 Plugin 'scrooloose/nerdtree'  "nerdtree文件列表
 Plugin 'jistr/vim-nerdtree-tabs'  "多文件共享nerdtree
 Plugin 'mattn/emmet-vim'  "前端速写
-Plugin 'jiangmiao/auto-pairs' "括号补全
 Plugin 'Xuyuanp/nerdtree-git-plugin' "nerdtree git  
+Plugin 'lilydjwg/colorizer' "颜色显示
+Plugin 'scrooloose/syntastic' "代码检测
+Plugin 'flazz/vim-colorschemes' "颜色主题
+Plugin 'majutsushi/tagbar' "结构列表 note:需要安装ctags
+
 filetype plugin indent on
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +54,8 @@ filetype plugin indent on    " required
 "nerdtree
 "F2显示nerdtree
 map <silent> <F1> :NERDTreeToggle<CR>
+"F8显示tagbar
+map <silent> <F8> :TagbarToggle<CR>
 " 显示行号
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
@@ -76,7 +82,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 "前端速写
-let g:user_emmet_expandabbr_key = '<Tab>'
+let g:user_emmet_expandabbr_key = '<C-y>'
 "vim-powerline
 set laststatus=2
 set t_Co=256
@@ -92,21 +98,28 @@ set cursorcolumn
 set relativenumber number
 "语法高亮
 syntax on
+"颜色主题
+colorscheme molokai
 "显示命令行
 set showcmd
 set cmdheight=1
 set showmode
 "缩进设置
 set autoindent 
-set cindent  
-" Tab键的宽度
+set expandtab
+set sw=4
 set tabstop=4
-" 统一缩进为4
 set softtabstop=4
-set shiftwidth=4
 "禁止生成临时文件
 set nobackup
 set noswapfile 
 "键位映射
 imap kk <esc>
-
+"花括号自动补全
+imap { {}<ESC>i
+imap {<CR> {<CR>}<ESC>O
+"中括号自动补全
+imap [ []<ESC>i
+imap [<CR> [<CR>]<ESC>O
+"小括号自动补全
+imap ( ()<ESC>i
