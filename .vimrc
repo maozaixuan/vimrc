@@ -100,6 +100,8 @@ set relativenumber number
 syntax on
 "颜色主题
 colorscheme molokai
+"设置字体
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10   "vim字体是受限于终端字体的，所以这个没作用
 "显示命令行
 set showcmd
 set cmdheight=1
@@ -110,11 +112,14 @@ set expandtab
 set sw=4
 set tabstop=4
 set softtabstop=4
+"折叠
+set foldmethod=indent  "根据缩进折叠
 "禁止生成临时文件
 set nobackup
 set noswapfile 
 "键位映射
 imap kk <esc>
+nnoremap <space> za
 "花括号自动补全
 imap { {}<ESC>i
 imap {<CR> {<CR>}<ESC>O
