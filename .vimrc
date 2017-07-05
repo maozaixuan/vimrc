@@ -120,6 +120,7 @@ set noswapfile
 "键位映射
 imap kk <esc>
 nnoremap <space> za
+map <F5> :call CompileRunGcc()<CR>
 "花括号自动补全
 imap { {}<ESC>i
 imap {<CR> {<CR>}<ESC>O
@@ -128,3 +129,28 @@ imap [ []<ESC>i
 imap [<CR> [<CR>]<ESC>O
 "小括号自动补全
 imap ( ()<ESC>i
+
+
+
+
+
+
+
+"一键编译
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time sh %
+    elseif &filetype == 'python'
+        exec "!time python %"
+    endif
+endfunc
