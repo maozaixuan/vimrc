@@ -34,6 +34,8 @@ Plugin 'lilydjwg/colorizer' "颜色显示
 Plugin 'scrooloose/syntastic' "代码检测
 Plugin 'flazz/vim-colorschemes' "颜色主题
 Plugin 'majutsushi/tagbar' "结构列表 note:需要安装ctags
+Plugin 'kshenoy/vim-signature' "显示标记
+
 
 filetype plugin indent on
 " All of your Plugins must be added before the following line
