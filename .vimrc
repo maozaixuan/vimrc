@@ -57,6 +57,12 @@ filetype plugin indent on    " required
 "F2显示nerdtree
 map <silent> <F1> :NERDTreeToggle<CR>
 "F8显示tagbar
+"基本常用快捷键如下：
+"切换到tagbar:ctrl+ww
+"折叠:za
+"跳转并停留在tagbar窗口:p
+"跳转并进入代码模式：enter
+"退出：q
 map <silent> <F8> :TagbarToggle<CR>
 " 显示行号
 let NERDTreeShowLineNumbers=1
