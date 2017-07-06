@@ -137,7 +137,7 @@ imap [ []<ESC>i
 imap [<CR> [<CR>]<ESC>O
 "小括号自动补全
 imap ( ()<ESC>i
-
+imap (<CR> (<CR>)<ESC>O
 
 
 
