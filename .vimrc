@@ -35,7 +35,7 @@ Plugin 'scrooloose/syntastic' "代码检测
 Plugin 'flazz/vim-colorschemes' "颜色主题
 Plugin 'majutsushi/tagbar' "结构列表 note:需要安装ctags
 Plugin 'kshenoy/vim-signature' "显示标记
-
+Plugin 'jlanzarotta/bufexplorer' "切换历史文件
 
 filetype plugin indent on
 " All of your Plugins must be added before the following line
@@ -56,6 +56,11 @@ filetype plugin indent on    " required
 "nerdtree
 "F2显示nerdtree
 map <silent> <F1> :NERDTreeToggle<CR>
+
+"F6显示历史文件栏
+
+map <silent> <F6> :BufExplorer<CR> 
+
 "F8显示tagbar
 "基本常用快捷键如下：
 "切换到tagbar:ctrl+ww
@@ -63,7 +68,9 @@ map <silent> <F1> :NERDTreeToggle<CR>
 "跳转并停留在tagbar窗口:p
 "跳转并进入代码模式：enter
 "退出：q
+
 map <silent> <F8> :TagbarToggle<CR>
+
 " 显示行号
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
