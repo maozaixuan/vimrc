@@ -123,18 +123,19 @@ set cmdheight=1
 set showmode
 "缩进设置
 set autoindent 
-set expandtab
-set sw=4
-set tabstop=4
-set softtabstop=4
+set expandtab "将tab转换为space储存,若要将已有文件的tab转为space，需要输入:%ret!
+set sw=4   "表示每一级缩进的长度，一般设置成跟softtabstop一样
+set tabstop=4 "一个tab显示出来是多少个空格的长度
+set softtabstop=4 "在操作BS的时候，4个空白会被当做一个tab刪除
 "折叠
 set foldmethod=indent  "根据缩进折叠
 "禁止生成临时文件
 set nobackup
 set noswapfile 
 "键位映射
+"展开全部折叠zi
 imap kk <esc>
-nnoremap <space> za
+nnoremap <space> za      
 map <F5> :call CompileRunGcc()<CR>
 "花括号自动补全
 imap { {}<ESC>i
