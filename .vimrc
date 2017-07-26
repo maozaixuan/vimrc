@@ -123,7 +123,7 @@ set cmdheight=1
 set showmode
 "缩进设置
 set autoindent 
-set expandtab "将tab转换为space储存,若要将已有文件的tab转为space，需要输入:%ret!
+set expandtab "将tab转换为space储存,若要将已有文件的tab转为space，需要输入:ret!  加!是用于处理非空白字符之后的TAB，即所有的tab，若不加!，则只处理行首的tab。
 set sw=4   "表示每一级缩进的长度，一般设置成跟softtabstop一样
 set tabstop=4 "一个tab显示出来是多少个空格的长度
 set softtabstop=4 "在操作BS的时候，4个空白会被当做一个tab刪除
